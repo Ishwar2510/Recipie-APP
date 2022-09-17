@@ -48,8 +48,9 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: center;
- 
+  
+  align-items: center;
+
   width: 30%;
 
   background-color: rgb(43, 136, 151);
