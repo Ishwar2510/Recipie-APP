@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Recipie from "./components/recipie";
-import {Fallback} from "./components/Fallback";
+import { Fallback } from "./components/Fallback";
 function App() {
-  
-  const [apicounter,setapicounter]=useState(0);
+  const [apicounter, setapicounter] = useState(0);
   const APP_KEY = "b94ffb5737d54526a631f10df9aac84e";
   const [query, setQuery] = useState("pasta");
   const [data, setData] = useState(Fallback);
@@ -20,24 +19,22 @@ function App() {
   }, [query]);
 
   async function apicall() {
-    setapicounter(prev=>prev+1);
-    console.log(apicounter)
+    setapicounter((prev) => prev + 1);
+    console.log(apicounter);
     try {
       let response = await fetch(url);
       let receivedData = await response.json();
       if (receivedData.code == 402) {
         alert(receivedData.message);
-        setData(Fallback)
+        setData(Fallback);
       } else {
         if (receivedData.results.length > 0) {
           console.log(receivedData.results);
           setData(receivedData.results);
-          
         }
       }
-     
     } catch (error) {
-      setData(Fallback)
+      setData(Fallback);
       console.log("this is an error");
       console.log(error);
     }
@@ -62,18 +59,33 @@ function App() {
           onChange={inputQuery}
           placeholder="Enter Item to Search For"
         ></input>
-        <button className="search_button" onClick={formSubmit}>Search</button>
+        <button className="search_button" onClick={formSubmit}>
+          Search
+        </button>
       </div>
       {/* <h1>{query.toUpperCase()}</h1> */}
       <div className="recepiesConatiner">
         {data.map((e) => {
-          return <Recipie key={e.id} title={e.title} image={e.image} summary={e.summary} dishTypes={e.dishTypes} serving={e.servings} price={e.pricePerServing} instruction={e.analyzedInstructions}/>;
+          return (
+            <Recipie
+              key={e.id}
+              title={e.title}
+              image={e.image}
+              summary={e.summary}
+              dishTypes={e.dishTypes}
+              serving={e.servings}
+              price={e.pricePerServing}
+              instruction={e.analyzedInstructions}
+            />
+          );
         })}
       </div>
-        <footer>
-          <h6>A recipe has no soul . You as the cook, must bring soul to the recipie</h6>
-          <p>THOMAS KELLER</p>
-        </footer>
+      <footer>
+        <h6>
+          A recipe has no soul . You as the cook, must bring soul to the recipie
+        </h6>
+        <p>THOMAS KELLER</p>
+      </footer>
     </div>
   );
 }
