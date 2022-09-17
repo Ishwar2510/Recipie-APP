@@ -1,3 +1,12 @@
+A Perfect Stop for a Bachelor
+Times come when we are in modd of cooking 
+surfing internet to find the dishes can some time may be cumbersome 
+This app provides a one stop solution
+Just type the Dish u wish to prepare
+and it will render variety of dishes along with detailed recipie;
+And money u can save per serve
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
