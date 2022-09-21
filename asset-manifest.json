@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Recipie-APP/static/css/main.e8ca7118.css",
-    "main.js": "/Recipie-APP/static/js/main.20cd0bbf.js",
+    "main.css": "/Recipie-APP/static/css/main.475b7774.css",
+    "main.js": "/Recipie-APP/static/js/main.10a5fb15.js",
     "index.html": "/Recipie-APP/index.html",
-    "main.e8ca7118.css.map": "/Recipie-APP/static/css/main.e8ca7118.css.map",
-    "main.20cd0bbf.js.map": "/Recipie-APP/static/js/main.20cd0bbf.js.map"
+    "main.475b7774.css.map": "/Recipie-APP/static/css/main.475b7774.css.map",
+    "main.10a5fb15.js.map": "/Recipie-APP/static/js/main.10a5fb15.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8ca7118.css",
-    "static/js/main.20cd0bbf.js"
+    "static/css/main.475b7774.css",
+    "static/js/main.10a5fb15.js"
   ]
 }
